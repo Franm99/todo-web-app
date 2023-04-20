@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Simple CSS -->
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+    
+    <title>Django To-do Lists</title>
+</head>
+
+<body>
+    <!-- Django placeholders use blocks within boundaries. -->
+    <div>
+        <!-- The following placeholder will help the Django engine to find the urlpatters entry 
+        named 'index' in the URLConf file and replace it with the correct path to it. In this case,
+        it's used to redirect to the index (home) page. -->
+        <h1 onclick="location.href='{% url "index" %}'">Django To-do Lists</h1>
+    </div>
+
+    <div>
+        <!-- Django placeholder added here to dynamically add specific code per page. -->
+        {% block content %}
+        This content will be replaced by different html code for each page.
+        {% endblock %} 
+    </div>
+</body>
+
+</html>
