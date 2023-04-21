@@ -12,21 +12,29 @@ Simple ToDo web app with Django.
 1. Clone the repository to your desired location.
 
 ```bash
-git clone https://github.com/Franm99/todo-web-app.git
+C:\> git clone https://github.com/Franm99/todo-web-app.git
 ```
 
 2. In the repository location, create a new environment (if not installed yet, install virtualenv with `pip install pirtualenv`).
 
+```bash
+C:\> python -m venv venv
+```
+
+3. Activate the virtual environment. 
+
 **Windows**
 ```bash
-venv\Scripts\activate.bat
+C:\> venv\Scripts\activate.bat
+(venv) C:\>
 ```
 **Linux**
 ```bash
-source venv/bin/activate
+~$ source venv/bin/activate
+(venv) ~$
 ```
 
-3. Install all dependencies.
+4. Install all dependencies.
 
 ```bash
 pip install -r requirements.txt
