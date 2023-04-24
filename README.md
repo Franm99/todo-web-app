@@ -42,8 +42,16 @@ pip install -r requirements.txt
 
 ## How to run (developer mode)
 
-When the virtual environment is activated, start a Django development server by doing:
+1. Activate the virtual environment.
+
+2. Migrate Django models to database.
+
+```bash
+(venv) C:\> python manage.py migrate
 ```
+3. Run the Django server.
+
+```bash
 (venv) C:\> python manage.py runserver
 # ...
 # Starting development server at http://127.0.0.1:8000/
