@@ -11,10 +11,10 @@
             {% for todo in object_list %} 
             <li>
                 <div>
-                    <div role="button" onclick="location.href='{% url "item-update" todo_list.id todo.id %}'">
-                        {{ todo.title }}
+                    <div style="background-color:{{ todo.state_color }}" role="button" onclick="location.href='{% url "item-update" todo_list.id todo.id %}'">
+                        {{ todo.title }} 
                         (Due {{ todo.due_date | date:"l, F j" }})
-                        [{{ todo.state }}]
+                        [{{ todo.get_state_display }}]
                     </div>
                 </div>
             </li>

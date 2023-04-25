@@ -7,10 +7,8 @@ from todo_app.models import ToDoItem
 from todo_app.utils import ItemState
 
 
-# TODO: make this to work
 @receiver(pre_save, sender=ToDoItem)
 def get_state_from_date(sender, instance:ToDoItem, **kwargs):
     
-    if instance.due_date < timezone.now() and instance.state != ItemState.DONE:
-            instance.state = ItemState.INCOMPLETE
-
+    if instance.due_date < timezone.now() and instance.state != 'DONE':
+            instance.state = ToDoItem.STATE_INCOMPLETE
