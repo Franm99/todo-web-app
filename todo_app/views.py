@@ -53,6 +53,7 @@ class ItemCreate(CreateView):
         "title",
         "description",
         "due_date",
+        "state"
     ]
     
     def get_initial(self):
@@ -79,6 +80,7 @@ class ItemUpdate(UpdateView):
         "title",
         "description",
         "due_date",
+        "state"
     ]
     
     def get_context_data(self):
